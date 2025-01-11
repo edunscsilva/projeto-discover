@@ -40,9 +40,13 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
   margin: 56px auto 0px;
+  padding: 0 24px;
   /*margin e padding funcionam: top, left, bottom, right*/
+
+  /*quero definir que o máximo de largura que eu terei é 588px, indepenente do tamanho do dispositivo*/
+  max-width: 588px;
 }
 
 #profile {
