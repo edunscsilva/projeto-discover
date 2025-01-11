@@ -11,6 +11,9 @@ body {
   background-size: cover;*/
 
   background: var(--bg-url) no-repeat top center/cover; /*short hand, uma forma mais ágil de fazer. Se liga numa ordem: color image repeat position/size*/
+
+  /*basicamente isso significa que teremos uma altura na tela que se adapta com maior facilidade ao viewport desse dispositivo, ou seja, a ideia é que isso vá "completar"  tela na altura, pra evitar espaços em branco*/
+  height: 100vh;
 }
 
 /* * é o seletor universal */
@@ -167,4 +170,16 @@ ul li a:hover {
 footer {
   padding: 24px 0;
   text-align: center;
+}
+
+/*media queries*/
+/*min-width significa que em uma largua menor do que 700px as regras que serão ativas são as regras configuradas dentro das chaves abaixo*/
+/*as media queries só funcionam caso tenhamos viewport configurado no index*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
